@@ -10,3 +10,7 @@
       - "Hostname: {{ hostvars[inventory_hostname]['ansible_env']['HOSTNAME'] }}"
       - "Ansible connection: {{ hostvars[inventory_hostname]['ansible_connection'] }}"
       - "Distribution: {{ hostvars[inventory_hostname]['ansible_distribution'] }} {{ hostvars[inventory_hostname]['ansible_distribution_version'] }}"
+  - name: Install ddupdate package
+    package:
+      name: ddupdate
+      state: present
